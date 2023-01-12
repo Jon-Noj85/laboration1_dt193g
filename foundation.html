@@ -1,0 +1,228 @@
+<!doctype html>
+<html class="no-js" lang="sv" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <!-- Header med navigering -->
+    <header>
+        <div data-sticky-container>
+            <div data-sticky data-options="marginTop:0;">
+
+                <nav class="top-bar topbar-responsive">
+                    <div class="top-bar-title">
+                        <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+                            <button class="menu-icon" type="button" data-toggle></button>
+                        </span>
+                        <a class="topbar-responsive-logo" href="index.html"><strong>CSS-ramverk</strong></a>
+                    </div>
+                    <div id="topbar-responsive" class="topbar-responsive-links">
+                        <div class="top-bar-right">
+                            <ul class="menu simple vertical medium-horizontal">
+                                <li><a href="index.html">Start</a></li>
+                                <li><a href="bootstrap.html">Bootstrap</a></li>
+                                <li><a href="foundation.html">Foundation</a></li>
+                                <li><a href="publish.html">Publicering</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Container för hela innehållet -->
+        <div class="grid-container">
+            <!-- Breadcrumbs -->
+            <nav aria-label="You are here:" role="navigation">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">Start</a></li>
+                    <li><span class="show-for-sr">Current: </span>Foundation</li>
+                </ul>
+            </nav>
+            <!-- Om ramverket -->
+            <article>
+                <h1>Foundation</h1>
+                <p>Foundation är ett CSS-ramverk som utvecklats av företaget Zurb. Jag laddade ner fil-paketet från <a
+                        href="https://get.foundation/" target="_blank">get.foundation</a>, och använde sedan de CSS- &
+                    JavaScript-filer som kom med.</p>
+                <p>Fördelar med Foundation är att det inte är lika vanligt som Bootstrap, så det ser inte lika generiskt
+                    ut. Dessutom appliceras CSS utan användning av klasser på många element såsom formulär, vilket gör
+                    att det inte ser lika rörigt ut i koden.
+                </p>
+                <p>En nackdel med Foundation som jag ser det, är att dokumentationen inte alltid verkar uppdaterad till
+                    den nyaste versionen. Det finns inte heller lika mycket information att tillgå om man jämför med
+                    Bootstrap. Till exempel vände jag mig
+                    till dokumentationen för att se hur man gör checkbox obligatorisk att fylla i innan man skickar ett
+                    formulär, utan lyckat resultat.</p>
+                <p>Det var också svårt att få till navigeringen. Jag ville ha en hamburgarmeny på små skärmar, och då
+                    också att sidans namn "CSS-ramverk" ska synas på ena sidan och ikonen för att öpnna menyn på andra
+                    sidan. Det var svårt att få till, jag
+                    lyckades genom att hitta <a
+                        href="https://get.foundation/building-blocks/blocks/topbar-responsive.html"
+                        target="_blank">färdig kod under Building blocks</a> på hemsidan, och CSS kod kopierades in i
+                    slutet på filen foundation.css.</p>
+                <p>Ett annat problem är att navigeringen bara är fixerad på större skärmar, och inte på mindre. Jag har
+                    inte lyckats hitta hur man löser det. Ett tredje problem var att jag ville att den aktiva sidan ska
+                    synas i menyn, men både klassen active
+                    och is-active ger ett utseende som inte passar. Detta även innan koden från building blocks. Så med
+                    det sagt, jag tycker personligen att Foundation har ett mer unikt utseende och mer modernt än
+                    Bootstrap, men det är definitivt svårare
+                    att sätta sig in i på kort tid. Det finns en del dokumentation och tutorials på Youtube, men det är
+                    inte lika intuitivt och lättillgängligt som Bootstrap.</p>
+                <p>Det var även svårt att hitta information om hur man ändrar färg på olika element (knappen i
+                    formuläret lyckades jag ändra på med hjälp av klassen success) men sidfoten fick en in-line CSS med
+                    bakgrundsfärg svart och textfärg vit.</p>
+            </article>
+            <hr>
+            <!-- Tabell -->
+            <article>
+                <h2>Medlemmar i föreningen Konfusenbo</h2>
+                <table class="responsive-card-table unstriped">
+                    <thead>
+                        <tr>
+                            <th>Namn</th>
+                            <th>Roll</th>
+                            <th>Kontakt</th>
+                            <th>Medlem sedan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Namn">Nils Nilsson</td>
+                            <td data-label="Roll">Styrelseordförande</td>
+                            <td data-label="Kontakt">nils.nilsson@gmail.com</td>
+                            <td data-label="Medlem sedan">1971</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Namn">Ida Härenstam</td>
+                            <td data-label="Roll">Köksmästare</td>
+                            <td data-label="Kontakt">ida.harenstam@gmail.com</td>
+                            <td data-label="Medlem sedan">1987</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Namn">Hagrid Tomtsson</td>
+                            <td data-label="Roll">Trädgårdsvakt</td>
+                            <td data-label="Kontakt">hagrid45@hotmail.com</td>
+                            <td data-label="Medlem sedan">1991</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Namn">Parul Singh</td>
+                            <td data-label="Roll">Kassör</td>
+                            <td data-label="Kontakt">parul.r.singh@gmail.com</td>
+                            <td data-label="Medlem sedan">2002</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Namn">Eva Torsdotter</td>
+                            <td data-label="Roll">Medlemsansvarig</td>
+                            <td data-label="Kontakt">eva.torsdotter@gmail.com</td>
+                            <td data-label="Medlem sedan">2008</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <hr>
+            <article>
+                <h2>Gå med i Konfusenbo</h2>
+                <form data-abide novalidate>
+                    <div data-abide-error class="alert callout" style="display: none;">
+                        <p><i class="fi-alert"></i> Ansökan innehåller fel.</p>
+                    </div>
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                            <div class="medium-6 cell">
+                                <label for="firstnamn">Förnamn</label>
+                                <input type="text" id="firstnamn" required>
+                                <!-- Felmeddelande -->
+                                <span class="form-error">Skriv förnamn!</span>
+                            </div>
+                            <div class="medium-6 cell">
+                                <label for="lastname">Efternamn</label>
+                                <input type="text" id="lastname" required>
+                                <!-- Felmeddelande -->
+                                <span class="form-error">Skriv efternamn!</span>
+                            </div>
+                            <div class="medium-6 cell">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                                <!-- Felmeddelande -->
+                                <span class="form-error">Skriv en email!</span>
+                            </div>
+                            <div class="medium-6 cell">
+                                <label for="role">Önskad roll i föreningen</label>
+                                <select id="role" required>
+                                    <option selected disabled value="">Välj...</option>
+                                    <option>Trädgård</option>
+                                    <option>Planering</option>
+                                    <option>Röjning</option>
+                                    <option>Matlaget</option>
+                                    <option>Styrelseroll</option>
+                                </select>
+                                <!-- Felmeddelande -->
+                                <span class="form-error">Välj en roll!</span>
+                            </div>
+                            <div class="cell">
+                                <label for="information">Detta önskar jag få ut av föreningen
+                                    (valfritt)</label>
+                                <textarea id="information" placeholder="Skriv kort här"></textarea>
+                            </div>
+                            <div class="cell">
+                                <input data-min-required="1" type="checkbox" id="validation" required>
+                                <label for="validation">
+                                    Jag godkänner att mina personuppgifter lagras
+                                </label>
+                                <!-- Felmeddelande -->
+                                <span class="form-error">Du måste godkänna!</span>
+                            </div>
+                            <div class="cell">
+                                <input type="submit" class="button success large" value="Skicka medlemsansökan">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </article>
+        </div>
+    </main>
+
+    <!-- Sidfot -->
+    <footer style="background-color:#000000; color:#fff;">
+
+        <!-- Container för sidfot -->
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x grid-padding-y">
+                <!-- Grid row -->
+                <div class="cell medium-6">
+                    <h3>Om sidan</h3>
+                    <p>Denna webbbplats är laboration 1 i kursen DT193G, fullstack-utveckling med ramverk.</p>
+                    <p>Kursen är en del av TWEUG, programmet i webbutevckling vid Mittuniversitetet.</p>
+                </div>
+                <!--En kolumn -->
+                <div class="cell medium-6">
+                    <h3>Ramverk</h3>
+                    <ul class="no-bullet">
+                        <li>
+                            <a href="bootstrap.html">Bootstrap</a>
+                        </li>
+                        <li>
+                            <a href="foundation.html">Foundation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript för Foundation -->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

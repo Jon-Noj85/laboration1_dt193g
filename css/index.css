@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: rgb(36, 36, 36);
+}
+
+.header-content {
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#site-name {
+    font-size: 2.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul {
+    text-align: center;
+}
+
+header li {
+    display: inline;
+}
+
+header li a {
+    padding: 0 2rem;
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    position: relative;
+    transition: all 0.4s ease;
+    padding: 1.6rem;
+}
+
+
+/* Animation från sharkcoder, "", https://sharkcoder.com/visual/underline */
+
+header li a::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: #9dffd6;
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+header li a:hover {
+    color: #9dffd6;
+}
+
+header li a:hover::after {
+    width: 100%;
+}
+
+.active {
+    color: #9dffd6;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+main {
+    font-size: 1.6rem;
+    padding: 1rem;
+    min-height: 75vh;
+}
+
+h1 {
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    padding: 1rem 0 0.5rem;
+}
+
+footer {
+    background-color: rgb(36, 36, 36);
+    color: #fff;
+    padding: 1rem 0 4rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding-bottom: 2rem;
+}
+
+.footer-content a {
+    color: #fff;
+}
+
+@media screen and (max-width: 799px) {
+    .divider {
+        width: 80%;
+        margin: 2rem auto;
+    }
+    .footer-item {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .header-content {
+        height: 51px;
+        flex-direction: row;
+        justify-content: start;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    main {
+        width: 60%;
+        margin: 0 auto;
+        font-size: 1.6rem;
+        box-shadow: 1px 2px 16px -4px rgba(0, 0, 0, 0.57);
+        -webkit-box-shadow: 1px 2px 16px -4px rgba(0, 0, 0, 0.57);
+        -moz-box-shadow: 1px 2px 16px -4px rgba(0, 0, 0, 0.57);
+    }
+    header nav {
+        padding-left: 4rem;
+    }
+    .divider {
+        display: none;
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .footer-item {
+        width: 50%;
+        text-align: center;
+    }
+}
