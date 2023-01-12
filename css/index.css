@@ -1,4 +1,7 @@
-* {
+/* reset */
+*,
+*:before,
+*:after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -10,13 +13,43 @@ html {
 
 body {
     font-size: 1.6rem;
-    line-height: 1.5;
-    height: 100vh;
+    line-height: 1.6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Rubriker */
+h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 5rem 0 0.5rem;
+}
+
+h1,
+h2,
+h3 {
+    padding: 1rem 0 0.5rem;
+}
+
+/* Innehåll */
+p {
+    padding-bottom: 1rem;
+}
+
+section {
+    padding: 1rem 0 2rem;
+}
+
+ul {
+    padding: 0 3rem;
+}
+
+/* Sidhuvud */
 header {
     background-color: rgb(36, 36, 36);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
 .header-content {
@@ -33,6 +66,7 @@ header {
     text-decoration: none;
 }
 
+/* Navigering */
 header nav ul {
     text-align: center;
 }
@@ -42,7 +76,6 @@ header li {
 }
 
 header li a {
-    padding: 0 2rem;
     font-size: 1.7rem;
     text-decoration: none;
     color: #fff;
@@ -58,7 +91,7 @@ header li a {
 header li a::after {
     content: "";
     position: absolute;
-    height: 3px;
+    height: 2px;
     background-color: #9dffd6;
     width: 0;
     left: 50%;
@@ -77,6 +110,8 @@ header li a:hover::after {
 
 .active {
     color: #9dffd6;
+    background-color: rgb(53, 53, 53);
+
 }
 
 a:hover {
@@ -89,17 +124,19 @@ main {
     min-height: 75vh;
 }
 
-h1 {
-    font-size: 2.8rem;
+.btn {
+    text-decoration: none;
+    background-color: rgb(36, 36, 36);
+    color: #fff;
+    padding: 1.5rem 0;
+    width: 40%;
     text-align: center;
+    display: inline-block;
+    border-radius: 28px;
+    margin: 0.5rem 0 2rem;
 }
 
-h1,
-h2,
-h3 {
-    padding: 1rem 0 0.5rem;
-}
-
+/* Sidfot */
 footer {
     background-color: rgb(36, 36, 36);
     color: #fff;
@@ -121,38 +158,90 @@ footer {
     color: #fff;
 }
 
+/* Mindre enhet */
 @media screen and (max-width: 799px) {
+    h1 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    /* Knapp */
+    .btn {
+        display: block;
+        width: 80%;
+        margin: 0.5rem auto 2rem;
+    }
+
+    header {
+        position: static;
+        top: 0;
+        right: 0;
+    }
+
+    /* Navigering */
+    .header-content {
+        padding-bottom: 0;
+    }
+
+    .header-content ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: space-evenly;
+        align-items: center;
+    }
+
+    .header-content li {
+        flex-basis: 50%;
+        padding: 2rem 0;
+        margin: 0 auto;
+    }
+
+    .header-content li a {
+        display: block;
+        width: 100%;
+        font-size: 1.6rem;
+    }
+
     .divider {
         width: 80%;
         margin: 2rem auto;
     }
+
     .footer-item {
         text-align: center;
     }
 }
 
+
+
+/* Större enhet */
 @media screen and (min-width: 800px) {
     .header-content {
-        height: 51px;
+        height: 54px;
         flex-direction: row;
         justify-content: start;
         max-width: 90%;
         margin: 0 auto;
     }
+
     main {
         width: 60%;
         margin: 0 auto;
+        padding: 0 2rem;
         font-size: 1.6rem;
         box-shadow: 1px 2px 16px -4px rgba(0, 0, 0, 0.57);
         -webkit-box-shadow: 1px 2px 16px -4px rgba(0, 0, 0, 0.57);
         -moz-box-shadow: 1px 2px 16px -4px rgba(0, 0, 0, 0.57);
     }
+
     header nav {
         padding-left: 4rem;
     }
+
     .divider {
         display: none;
     }
+
     .footer-content {
         display: flex;
         flex-direction: row;
@@ -160,8 +249,16 @@ footer {
         flex-wrap: wrap;
         margin: 0 auto;
     }
+
     .footer-item {
         width: 50%;
         text-align: center;
+    }
+}
+
+/* Mellan enhet */
+@media screen and (max-width: 1023px) and (min-width: 800px) {
+    main {
+        width: 90%;
     }
 }

@@ -37,7 +37,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <main id="mainContent">
         <!-- Container för hela innehållet -->
         <div class="grid-container">
             <!-- Breadcrumbs -->
@@ -52,7 +52,18 @@
                 <h1>Foundation</h1>
                 <p>Foundation är ett CSS-ramverk som utvecklats av företaget Zurb. Jag laddade ner fil-paketet från <a
                         href="https://get.foundation/" target="_blank">get.foundation</a>, och använde sedan de CSS- &
-                    JavaScript-filer som kom med.</p>
+                    JavaScript-filer som kom med. Dessa är:</p>
+                <ul>
+                    <li>foundation.css</li>
+                    <li>app.css</li>
+                    <li>foundation.js</li>
+                    <li>app.js</li>
+                    <li>jquery.js</li>
+                    <li>what-input.js</li>
+                </ul>
+            </article>
+            <article>
+                <h2>Fördelar & nackdelar med Foundation</h2>
                 <p>Fördelar med Foundation är att det inte är lika vanligt som Bootstrap, så det ser inte lika generiskt
                     ut. Dessutom appliceras CSS utan användning av klasser på många element såsom formulär, vilket gör
                     att det inte ser lika rörigt ut i koden.
@@ -72,14 +83,16 @@
                 <p>Ett annat problem är att navigeringen bara är fixerad på större skärmar, och inte på mindre. Jag har
                     inte lyckats hitta hur man löser det. Ett tredje problem var att jag ville att den aktiva sidan ska
                     synas i menyn, men både klassen active
-                    och is-active ger ett utseende som inte passar. Detta även innan koden från building blocks. Så med
+                    och is-active ger ett utseende som inte passar. Detta även innan koden från building blocks.Det var
+                    även svårt att hitta information om hur man ändrar färg på olika element (knappen i
+                    formuläret lyckades jag ändra på med hjälp av klassen success) men sidfoten fick en in-line CSS med
+                    bakgrundsfärg svart och textfärg vit.</p>
+                <p>Med med
                     det sagt, jag tycker personligen att Foundation har ett mer unikt utseende och mer modernt än
                     Bootstrap, men det är definitivt svårare
                     att sätta sig in i på kort tid. Det finns en del dokumentation och tutorials på Youtube, men det är
                     inte lika intuitivt och lättillgängligt som Bootstrap.</p>
-                <p>Det var även svårt att hitta information om hur man ändrar färg på olika element (knappen i
-                    formuläret lyckades jag ändra på med hjälp av klassen success) men sidfoten fick en in-line CSS med
-                    bakgrundsfärg svart och textfärg vit.</p>
+                </p>
             </article>
             <hr>
             <!-- Tabell -->
@@ -192,7 +205,7 @@
     </main>
 
     <!-- Sidfot -->
-    <footer style="background-color:#000000; color:#fff;">
+    <footer style="background-color:#2c3840; color:#fff;">
 
         <!-- Container för sidfot -->
         <div class="grid-container">
